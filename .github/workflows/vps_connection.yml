@@ -12,5 +12,5 @@ jobs:
         with:
           auth-key: ${{ secrets.NETHERLAND_KEY }}
 
-        run: |
-          ssh -i ${{ secrets.NETHERLAND_KEY }} 141.11.107.110 -p 9011
+        run: ssh -i ${{ secrets.NETHERLAND_KEY }} 141.11.107.110 -p 9011
+
