@@ -1,0 +1,16 @@
+name: Access VPS
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: ssh to server
+        with:
+          auth-key: ${{ secrets.NETHERLAND_KEY }}
+
+        run: |
+          ssh -i ${{ secrets.NETHERLAND_KEY }} 141.11.107.110 -p 9011
